@@ -10,19 +10,49 @@ public class Nim
     int stones = 12;
     int stonesTaken;
 
-    Scanner input = new Scanner(System.in);
+        while(stones > 3){
+            stones = userTurn(stones);
 
-  
+        }
+}
+        /*
+            if(stones > 0){
+                stones = aiTurn(stones);
+            if(stones < 1){
+          System.out.println("The AI won :(");
+        }
+
+                */
+/* 
+announce winner
+
+*/
+
+//A. facilitate play until human or AI wins, and 
     //loop until game ends
-    while (stones>0) {
-        
-      //prompt for user input : num of stones
-    System.out.println("How many stones would you like to remove?");
-      //calculate number of stones remaining, print
-// !!!!! input not in, check line 13
+//A. user turn 
+
+                
+//B.prompt for user input : num of stones
+//C.calculate number of stones remaining & print
+    //!!!!! input not in, check line 13
+public static int userTurn(int stones){        
+
+Scanner input = new Scanner(System.in);
+System.out.println("How many stones would you like to remove?");
+    int guess;
     guess = input.nextInt();
-    stones = (int) (stones - guess);
-    System.out.println("There are \n%d stones left", stones);
+    stones = (int)(stones - guess);
+
+System.out.printf("There are %d stones left", stones);
+
+}
+
+    
+
+/*
+    
+    
       //check for win
         if(stones <= 3){
           System.out.println("You lose, loser");
@@ -34,11 +64,15 @@ public class Nim
           AIturn(stones);
         }
         else{
-        System.out.println("You won!");  
+        System.out.println("You won!"); 
+
+        }
+        
       
       //machine turn
       //method for AIturn (thanks David!)
 
+/*
 public static int aiTurn(int stones){
     Random rand = new Random();
     
@@ -105,7 +139,7 @@ public class Nim{
     }
   }
 
-  public static int userTurn(int stones){
+  
     Scanner input = new Scanner(System.in);
     
     int stonesTaken;
