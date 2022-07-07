@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Driver class for Time class  by Team LucidThinkeren
  * First Last
- * collaborators: First Last, First Last
+ * collaborators: Will, Latoya, Nicole
  */
 
 /**
@@ -20,13 +20,14 @@ import java.util.*;
 
 public class Driver {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-	//declare a var of appropriate type to assign an instance of Time to
-	Time t;
+	  //declare a var of appropriate type to assign an instance of Time to
+	  Time t;
 
-	//assign var the address of a newly-apportioned Time object
-	t = new Time();
-    }//end main()
+	  //assign var the address of a newly-apportioned Time object
+	  t = new Time(0, 15, 30);
+    System.out.println(t.toString());
+  }//end main()
 
 }//end class
