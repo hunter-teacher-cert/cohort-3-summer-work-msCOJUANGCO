@@ -9,8 +9,7 @@ import java.util.*;
  */
 
 /**
-
-INSTRUCTIONS:
+   INSTRUCTIONS:
    This file contains the starter code for our Time class.
    The class here uses ints for hours, minutes, and seconds but you
    could decide to change the internal representation to just store
@@ -94,8 +93,6 @@ public class Time {
       seconds = secs;
     }
 
-    
-
     /**
        Parameters:
        - other - a variable of type Time
@@ -103,9 +100,27 @@ public class Time {
        the time other.
     */
     public void add(Time other){
-	    // add the code to add the time represented by other
-	    // to this instance.
+	    // the other object is going to have it's own hours, minutes, and seconds
+      
+      //A. Modify the hours
+      hours += other.hours; // basic add
 
+      //B. Modify the seconds
+      seconds += other.seconds; // basic add; do this before min because affects it
+      if(seconds >= 60)
+      {
+        minutes++; 
+        seconds -= 60; 
+      }
+
+      //C. Modify the minutes
+      minutes += other.minutes; // basic add     
+      if(minutes >= 60)
+      {
+        hours++; 
+        minutes -= 60; 
+      }
+      
     }
 
 
@@ -117,9 +132,11 @@ public class Time {
      false otherwise.
   */
   public boolean equals(Time other){
-	  // your code here)
-
-	  return false; // change this
+	  // check each for hours, min, & seconds
+    // inequality is checking != (notequals)
+    if(hours != other.hours){ return false; } // if not the same
+    if(minutes != other.minutes){ return false; }
+	  return true; 
   }
 
   /**
