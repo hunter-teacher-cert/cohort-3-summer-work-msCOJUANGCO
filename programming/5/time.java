@@ -30,7 +30,7 @@ import java.util.*;
 
 
 
-public class Time {
+public class time {
     // Instance Variable(s)
     // You can change this if you want to use the alternate
     // implementation of just storing the overall seconds.

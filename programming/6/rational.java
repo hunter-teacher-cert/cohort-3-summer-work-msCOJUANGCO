@@ -22,7 +22,7 @@
 */
 
 
-public class Rational
+public class rational
 {
   // Instance variables aka attributes for numerator and denominator
   private int _numerator;
