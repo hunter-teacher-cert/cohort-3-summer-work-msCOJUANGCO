@@ -1,4 +1,9 @@
 /**
+ * Rational class by Team BangPi
+ * Saranii Muller
+ * collaborators: Kate Maschmeyer, Ashley Jufret, Nicole Cojuango
+ */
+/**
  * class Driver
  * tester class for class Rational
  */
@@ -8,7 +13,7 @@ public class Driver
   public static void main( String[] args )
   {
     //cut/paste this leading comment bar down, one line at a time, as you test...
-    /*~~~~~v~~~~~~~~~~down~goer~3~~~~~~~~~~~~~v~~~~~
+  
       Rational r = new Rational( 3, 7 );
       Rational s = new Rational();
       Rational t = new Rational( 8, 5 );
@@ -31,6 +36,7 @@ public class Driver
       System.out.print( r + " / " + t + " = ");
       r.divide(t);
       System.out.println(r);
+      /*~~~~~v~~~~~~~~~~down~goer~3~~~~~~~~~~~~~v~~~~~
       ~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~*/
   }
 
