@@ -91,7 +91,7 @@ With a SuperArray, we can:
 *
 */
 
-public class SuperArrayKate
+public class SuperArray
 {
  
   //instance variables
@@ -109,7 +109,7 @@ public class SuperArrayKate
   *  int[] myArr = new int[6]; // capacity of 6
   *  int[] myArr2 = new int[40]; // capacity of 40
   **/
-  public SuperArrayKate()
+  public SuperArray()
   {
     // NOTE: variables are already declared above (likely lines 96 & 97); you only have to create/instantiate them
     
@@ -128,7 +128,7 @@ public class SuperArrayKate
   *  int[] myArr = new int[6]; // capacity of 6
   *  int[] myArr2 = new int[40]; // capacity of 40
   **/
-  public SuperArrayKate( int size )
+  public SuperArray( int size )
   {
      // NOTE: variables are already declared above (likely lines 96 & 97); you only have to create/instantiate them
     

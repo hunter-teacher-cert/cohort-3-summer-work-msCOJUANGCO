@@ -252,7 +252,10 @@ public class SuperArrayKate
     return data[index];
 
   }
+
+
   // ************ END INTERMEDIATE ************
+
 
   // ************ START ADVANCED ************ 
 
@@ -260,32 +263,21 @@ public class SuperArrayKate
   *
   * Takes in an integer called index and an integer called value.  
   */
-  public void add(int index, int value)
+  public void add(int.index, int value)
   {
     // see if there's enough room
-   if(index > numberElements || index < 0) { // NOT ALLOWED -- no gaps allowed!
-     System.out.println("Index out of bounds!");
-   } else {
+    /* YOUR CODE HERE */
 
-      if(this.data.length == this.numberElements) { // we are currently at capacity 
-        grow();
-      } 
+    // shift elements toward the end of the array
+    /* YOUR CODE HERE */
 
-      // shift elements toward the end of the array
-      for(int i = numberElements - 1; i >= index; i--) {
-        data[i+1] = data[i];//this shuffles to the next index spot
-      }
-       // insert new element
-      /* YOUR CODE HERE */
-       data[index] = value;
-  
-      // increment numberElements
-      /* YOUR CODE HERE */ 
-       numberElements++; //adds 1 to the number of elements 
-     
-   }
+    // insert new element
+    /* YOUR CODE HERE */
+
+    // increment numberElements
+    /* YOUR CODE HERE */ 
   }
- 
+
   /** Advanced #1: remove(int index) 
   *
   * Takes in an integer called index and removes the value at the given index. 
@@ -293,16 +285,10 @@ public class SuperArrayKate
   public void remove(int index)
   {
     // shift items down to remove the item at index
-    if(index > numberElements - 1 || index < 0) { // NOT ALLOWED
-     System.out.println("Index out of bounds!");
-   } else {
-      for(int i = index; i < numberElements - 1; i++) {
-        data[i] = data[i+1];//shuffles data down
-      }
-      // subtract 1 from numElements;
-      numberElements--;
+    /* YOUR CODE HERE */
 
-    }
+    // subtract fom numElements;
+    /* YOUR CODE HERE */ 
   }
 
   // ************ END ADVANCED ************
