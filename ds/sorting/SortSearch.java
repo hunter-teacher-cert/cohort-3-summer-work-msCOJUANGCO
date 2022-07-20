@@ -93,10 +93,18 @@ public class SortSearch{
        
     */
     public void sort(){
-    int smallIndex = start;
+    //variables
+    int smallIndex = 0;
+    int holder = 0;
+    //use a 
+        for (int i=0; i < data.size(); i++){
+            smallIndex = findSmallestIndex(i);
+            holder = data.get(smallIndex);
+            data.set(smallIndex, data.get(i)); //this is where i got lost...maybe ask saranii for comment notes from demo
+            
+            data.set(i, holder);
+        }
         
-        for (int i)
-
 
     }
 
