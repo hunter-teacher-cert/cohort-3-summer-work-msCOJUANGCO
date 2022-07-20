@@ -1,13 +1,13 @@
 import java.io.*;
 import java.util.*;
 
-/*
+/*****************************************************************
 Tuesday July 12th, 2022
-Greg Sciame
-Collaborators: Wayne Tobias, Stacy Goldstein, Nicole Cojuangco
-*/
+
+Collaborators: *Greg Sciame, Wayne Tobias, Stacy Goldstein, Nicole Cojuangco (*shared multiplayer file)
+******************************************************************/
+
 /** Methods to write
- 
 Basic level:
 ------------
 1) public static ArrayList<Integer>
@@ -24,7 +24,6 @@ Challenge level:
 6)public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
 7)public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
 */
-
 
 public class AlPractice{
 
