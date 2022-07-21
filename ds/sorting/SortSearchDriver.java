@@ -34,9 +34,9 @@ public class SortSearchDriver {
 
       System.out.println("Binary search found value 35 at index " + ss.binarySearch(35));
 
-      System.out.println("Recursive Bin Search found value 5 at index " + ss.binarySearchRecursive(5, 0, 19));
+      System.out.println("Recursive Bin Search found value 5 at index " + ss.binarySearchRecursive(5, 0, ss.size()-1));
 
-            System.out.println("Recursive Bin Search found value 35 at index " + ss.binarySearchRecursive(35, 0, 19));
+            System.out.println("Recursive Bin Search found value 35 at index " + ss.binarySearchRecursive(35, 0, ss.size()-1));
 	
     }
 }
