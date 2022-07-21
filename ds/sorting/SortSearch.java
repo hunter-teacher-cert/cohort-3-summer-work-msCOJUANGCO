@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.*;
 
+// Collaborators: Adam P, Rachel K, Mike R, Nicole C
+
 /*
 Sort Project:
 Part 1:  (BASIC)
@@ -52,7 +54,10 @@ public class SortSearch{
 	return this.data.get(index);
     }
     
-
+ /* Convenience function to get the size of the ArrayList from the driver. ****This is the problem Adam was explaining towards the end when ss.size()-1 didn't work***
+*/
+   public int size(){
+  return data.size();
 
     /*
       return the index of the smallest data idem from index start to the end

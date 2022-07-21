@@ -5,14 +5,12 @@ public class SortSearchDriver {
     public static void main(String[] args) {
 
 
-	// Uncomment these to test part 1
-	
-	SortSearch ss = new SortSearch(20);
+//PART 1 *********************************************
+    SortSearch ss = new SortSearch(20);
 	System.out.println(ss);
 	
 		
-	// Uncomment these to test part 2
-
+//PART 2 *********************************************
 	int i;
 	i = ss.findSmallestIndex(0);
 	System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss);
@@ -22,9 +20,8 @@ public class SortSearchDriver {
 	i = ss.findSmallestIndex(3);
 	System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
 	
-	// Uncomment these to test part 3
+//PART 3 *********************************************
   System.out.println();
-      
       
 	System.out.println(ss);
 	ss.sort();
