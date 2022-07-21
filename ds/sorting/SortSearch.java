@@ -28,7 +28,7 @@ public class SortSearch{
     
     private Random r; 
 
-    //default constructor
+    
     public SortSearch(){
 	data = new ArrayList<Integer>();
 	r = new Random();
@@ -38,7 +38,6 @@ public class SortSearch{
 	
     }
     
-    //value constructor
     public SortSearch(int size){
 	data = new ArrayList<Integer>();
 	r = new Random();
@@ -70,14 +69,13 @@ public class SortSearch{
       
     */
     public int findSmallestIndex(int start){
-	int smallIndex = start;
-        for (int i = start; i < data.size();i++) {
-            if (data.get(i) < data.get (smallIndex)){
-                smallIndex = i;
-            }
+	    int smallIndex = start;
+      for(int i = start; i < data.size(); i++){
+        if( data.get(i) < data.get(smallIndex)){
+          smallIndex = i;
         }
-	
-	return smallIndex;
+      }
+	    return smallIndex;
     }
 
 
@@ -93,21 +91,25 @@ public class SortSearch{
        
     */
     public void sort(){
-    //variables
-    int smallIndex = 0;
-    int holder = 0;
-    //use a 
-        for (int i=0; i < data.size(); i++){
-            smallIndex = findSmallestIndex(i);
-            holder = data.get(smallIndex);
-            data.set(smallIndex, data.get(i)); //this is where i got lost...maybe ask saranii for comment notes from demo
+        for(int i = 0; i< data.size(); i++){//iterating the start position of find smallest index
+            int smallindex = findSmallestIndex(i); //sets the variable to index of smallest element
+            swapElements(data, smallindex, i);
             
-            data.set(i, holder);
+            //SORT WITHOUT USING SWAPELEMENTS METHOD
+            // int smallval = data.get(smallindex); //set the variable to the value of the smallest element
+            // int startval = data.get(i); //sets the value of the start position
+            // data.set(i, smallval); //puts the smallest values at the start position
+            // data.set(smallindex, startval); //puts the start value at the smallest values position
         }
-        
 
     }
 
+   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2){
+    int index1val = dataList.get(index1);// initialize variables and use get and set methods
+    int index2val = dataList.get(index2);
+    dataList.set(index1, index2val);// replace value in index 1 with value in index 2
+    dataList.set(index2, index1val); //replace value in index2 with value in index 1
+  }
 
 
     /* Search project starts here */
@@ -120,9 +122,12 @@ public class SortSearch{
        This algorithm works on any ArrayList.
     */
     public int linearSearch(int value){
-	
-	
-	return 0; // replace this return
+      for (int i = 0; i< data.size(); i++){
+        if (data.get(i) == value ){
+          return i;
+        }
+      }
+	return -1; // replace this return
     }
     
     /**
@@ -132,14 +137,31 @@ public class SortSearch{
     */
     public int binarySearch(int value){
 
-	// create assign variables  representing the high, low and middle indices 
-	// while we're not done:
-	//   if the item is at data.get(middle), return middle
-	//   otherwise, update high, low, and middle
+//set firstIndex, lastIndex, and middleIndex
+int firstIndex = 0;
+int lastIndex = data.size()-1; 
+int middleIndex = (firstIndex + lastIndex)/2;
 
-	return 0;
-	    
+while (data.get(middleIndex) != value){
+    
+  //if middleIndexValue is < value
+    if (data.get(middleIndex) < value) {
+        firstIndex = middleIndex;
     }
+  //else if middleIndexValue > value
+    else {
+        lastIndex = middleIndex;
+    }
+    middleIndex = (firstIndex + lastIndex)/2;
+
+    if (firstIndex == middleIndex || lastIndex == middleIndex) {
+        return -1;
+    }
+  }
+
+	return middleIndex;
+	    
+  }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
@@ -148,11 +170,25 @@ public class SortSearch{
     */
 
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
+  
+  if(highIndex - lowIndex != 1){
+    
+	  int middleIndex = (lowIndex + highIndex)/2;
+  
+    if (data.get(middleIndex) == value) {
+        return middleIndex;
+    }
 
-	// refer to class discussion
-	
-	return 0;
-	    
+    if (data.get(middleIndex) < value) {
+
+      return binarySearchRecursive(value, middleIndex, highIndex);
+    }
+
+    return binarySearchRecursive(value, lowIndex, middleIndex);
+    
+  }
+  return -1;
+  
     }
     
 	
@@ -166,5 +202,6 @@ public class SortSearch{
 	
     }
     
+
     
 }
