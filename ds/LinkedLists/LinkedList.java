@@ -27,7 +27,7 @@ remove(int index);
 
 public class LinkedList{
 
-  private Node head;
+private Node head;
 
   public LinkedList(){
     head = null;
