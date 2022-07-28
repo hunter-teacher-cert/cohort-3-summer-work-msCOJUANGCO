@@ -1,3 +1,8 @@
+/*COLLABORATORS: Thea W., Ed H., Christine M.
+    missed day, caught up with work, had discussions with 
+    group until concept was solid1 */
+
+
 public class ExpressionTree{
 
 

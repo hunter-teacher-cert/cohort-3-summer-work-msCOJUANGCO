@@ -1,3 +1,5 @@
+//COLLABORATORS: Thea W., Ed H., Christine M., Nicole C.
+
 public class TreeDriver{
   public static void main(String[]args){
 
@@ -18,7 +20,7 @@ public class TreeDriver{
     
     ExpressionTree eight = new ExpressionTree(8.0);
     ExpressionTree add = new ExpressionTree('+', two, ten);
-    ExpressionTree multiply = new ExpressionTree('*', eight, add);
+    ExpressionTree multiply = new ExpressionTree('*', five, add);
     ExpressionTree nextStep = new ExpressionTree('-', add, multiply);
 
 
