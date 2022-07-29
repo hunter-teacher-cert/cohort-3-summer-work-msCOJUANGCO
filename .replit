@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Driver{
+
+  public static void main(String[] args) {
+
+  Stack s = new Stack();
+  System.out.println(s.isEmpty()); // should print true
+  s.push(3);
+  s.push(5);
+  s.push(7);
+  System.out.println(s);  //should print [7, 5, 3]
+  
+  System.out.println(s.isEmpty()); //should be false
+  System.out.println(s.top()); //7
+  System.out.println(s.pop()); //7
+  System.out.println(s);  //should print [ 5, 3]
+    System.out.println(s.pop()); // 5
+    System.out.println(s.pop()); // 3
+    System.out.println(s.pop()); //error
+
+   Queue q = new Queue();
+  System.out.println(q.isEmpty()); // should print true
+  q.enqueue(3);
+  q.enqueue(5);
+  q.enqueue(7);
+  System.out.println(q);  //should print [7, 5, 3]
+  
+  System.out.println(q.isEmpty()); //should be false
+  System.out.println(q.front()); //3
+  System.out.println(q.dequeue()); //3
+  System.out.println(q);  //should print [ 7, 5]
+    System.out.println(q.dequeue()); // 5
+    System.out.println(q.dequeue()); // 7
+    System.out.println(q.dequeue()); //error
+    
+  }
+  
+}t
